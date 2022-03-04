@@ -1,11 +1,14 @@
 <template>
 <div class="wrapper">
   <div class="products">
+  <h1 v-if="this.$root.$data.cart.length === 0">Cart is empty!</h1>
+
     <div class="product" v-for="item in sortedCategories">
       <div class="info">
         <h1>{{item.name}}</h1>
         <h1>{{item.country}}</h1>
         <h1>{{getProductQuanlity(item.id)}}</h1>
+
       </div>
       <div class="image">
         <img :src="'/images/products/'+item.image">
@@ -13,7 +16,6 @@
       <div class="price">
         <button @click="remove(item)" class="auto">Remove</button>
       </div>
-
     </div>
   </div>
 </div>
