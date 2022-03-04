@@ -15,7 +15,15 @@
       </div>
     </div>
   </div>
+
+  <div class="footer">
+    <footer class="site-footer navbar-dark bg-dark">
+      <a href="https://github.com/paolopoemape/grocery-store-project">Github Link</a><i class="fab fa-github"></i>
+    </footer>
+  </div>
 </div>
+
+
 </template>
 
 <script>
@@ -42,8 +50,23 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 100px;
 }
-
+.footer{
+  clear: both;
+  margin-top: 100px;
+}
+.site-footer{
+  background-color: #DDE0E3;
+  border-top: 1px solid;
+  position: fixed;
+  left:0px;
+  bottom:0px;
+  height:100px;
+  width:100%;
+  text-align: center;
+  clear: both;
+}
 .products {
   margin-top: 20px;
   display: flex;

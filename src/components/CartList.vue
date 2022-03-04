@@ -3,7 +3,7 @@
   <div class="products">
   <h1 v-if="this.$root.$data.cart.length === 0">Cart is empty!</h1>
 
-    <div class="product" v-for="item in sortedCategories">
+    <div class="product" v-for="item in sortedCategories" :key="item.id">
       <div class="info">
         <h1>{{item.name}}</h1>
         <h1>{{item.country}}</h1>
@@ -18,12 +18,15 @@
       </div>
     </div>
   </div>
+  <div class="footer">
+    <footer class="site-footer navbar-dark bg-dark">
+      <a href="https://github.com/paolopoemape/grocery-store-project">Github Link</a><i class="fab fa-github"></i>
+    </footer>
+  </div>
 </div>
 </template>
 
 <script>
-import { eventBus } from '../main';
-import uniq from 'lodash/uniq'
 
 export default {
   name: 'CartList',
@@ -70,8 +73,23 @@ computed: {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 100px;
 }
-
+.footer{
+  clear: both;
+  margin-top: 100px;
+}
+.site-footer{
+  background-color: #DDE0E3;
+  border-top: 1px solid;
+  position: fixed;
+  left:0px;
+  bottom:0px;
+  height:100px;
+  width:100%;
+  text-align: center;
+  clear: both;
+}
 .products {
   margin-top: 20px;
   display: flex;
