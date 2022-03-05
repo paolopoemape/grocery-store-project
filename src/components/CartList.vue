@@ -7,7 +7,7 @@
       <div class="info">
         <h1>{{item.name}}</h1>
         <h1>{{item.country}}</h1>
-        <h1>{{getProductQuanlity(item.id)}}</h1>
+        <h1>Quantity: {{getProductQuanlity(item.id)}}</h1>
 
       </div>
       <div class="image">
